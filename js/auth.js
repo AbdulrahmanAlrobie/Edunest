@@ -14,7 +14,11 @@ import {
 
 const signUpPassword = document.getElementById('signup-password')
 const loginPassword = document.getElementById('login-password')
-
+export function initStyle () {
+  const loginBtn = document.querySelector('#login')
+  const signupBtn = document.querySelector('#signup')
+  const signUpToggleBtn = document.getElementById('toggle-signup-password')
+  const loginToggleBtn = document.getElementById('toggle-login-password')
   window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search)
     const formToShow = urlParams.get('form')
@@ -99,7 +103,13 @@ function addTogglePasswordEventListener (button, input, eyeIconId) {
     }
   })
 }
-
+export function initAuth () {
+  const signUpForm = document.getElementById('signup-form')
+  const loginForm = document.getElementById('login-form')
+  const signUpEmail = document.getElementById('signup-email')
+  const loginEmail = document.getElementById('login-email')
+  const forgotPassword = document.getElementById('forgot-password')
+  const checkBox = document.getElementById('remember-me')
 
 
   // Authentication logic:
